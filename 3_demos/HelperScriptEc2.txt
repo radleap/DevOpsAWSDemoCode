@@ -28,9 +28,10 @@
             }
           },
           "Properties": {
-              "KeyName": "Edureka_1",
-              "ImageId": "ami-0cd3dfa4e37921605",
-              "SecurityGroupIds" : ["sg-097a44e119c4029a9"],
+              "Tags":[{"Key" : "Name", "Value" : "MyNewCloudformationEc2"}, {"Key" : "Env", "Value" : "Demo"}],
+              "KeyName": "Demo-DevOps-Edureka",
+              "ImageId": "ami-07eaf2ea4b73a54f6",
+              "SecurityGroupIds" : ["sg-00c4bb7b7b77920d7"],
               "InstanceType" : "t2.micro",
               "UserData": {
                   "Fn::Base64": {
