@@ -1,0 +1,20 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Test Custom resource",
+    "Parameters": {
+      "GroupDescription": {
+        "Type": "String",
+        "Default": "Enter data to be passed"
+      }
+    },
+    "Resources": {
+      "createSg": {
+         "Type": "AWS::CloudFormation::CustomResource",
+         "Version": "1.0",
+         "Properties": {
+            "ServiceToken": "<ARN of Lambda Function>",
+            "GroupDescription": { "Ref": "GroupDescription" }
+         }
+      }
+    }
+}
